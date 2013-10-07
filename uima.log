@@ -1,1 +1,54 @@
-10/7/13 12:14:54 AM - 10: edu.stanford.nlp.ling.tokensregex.CoreMapExpressionExtractor.appendRules: INFO: Ignoring inactive rule: temporal-composite-8:ranges
+10/7/13 3:37:28 PM - 10: org.apache.uima.adapter.jms.client.BaseUIMAAsynchronousEngine_impl.<init>(128): INFO: UIMA Version 2.4.0 UIMA-AS Version 2.4.0
+10/7/13 3:37:29 PM - 10: org.apache.uima.adapter.jms.client.BaseUIMAAsynchronousEngine_impl.notifyOnInitializationFailure: WARNING: Top Level Controller Initialization Exception.
+javax.jms.JMSException: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+	at org.apache.activemq.util.JMSExceptionSupport.create(JMSExceptionSupport.java:35)
+	at org.apache.activemq.ActiveMQConnectionFactory.createActiveMQConnection(ActiveMQConnectionFactory.java:286)
+	at org.apache.activemq.ActiveMQConnectionFactory.createActiveMQConnection(ActiveMQConnectionFactory.java:230)
+	at org.apache.activemq.ActiveMQConnectionFactory.createConnection(ActiveMQConnectionFactory.java:178)
+	at org.apache.uima.adapter.jms.client.BaseUIMAAsynchronousEngineCommon_impl$SharedConnection.create(BaseUIMAAsynchronousEngineCommon_impl.java:2856)
+	at org.apache.uima.adapter.jms.client.BaseUIMAAsynchronousEngine_impl.createSharedConnection(BaseUIMAAsynchronousEngine_impl.java:397)
+	at org.apache.uima.adapter.jms.client.BaseUIMAAsynchronousEngine_impl.initialize(BaseUIMAAsynchronousEngine_impl.java:720)
+	at org.apache.uima.aae.jms_adapter.JmsAnalysisEngineServiceStub.<init>(JmsAnalysisEngineServiceStub.java:145)
+	at org.apache.uima.aae.jms_adapter.JmsAnalysisEngineServiceAdapter.initialize(JmsAnalysisEngineServiceAdapter.java:47)
+	at org.apache.uima.impl.CustomResourceFactory_impl.produceResource(CustomResourceFactory_impl.java:92)
+	at org.apache.uima.impl.CompositeResourceFactory_impl.produceResource(CompositeResourceFactory_impl.java:62)
+	at org.apache.uima.UIMAFramework.produceResource(UIMAFramework.java:269)
+	at org.apache.uima.UIMAFramework.produceResource(UIMAFramework.java:314)
+	at org.apache.uima.UIMAFramework.produceAnalysisEngine(UIMAFramework.java:425)
+	at org.apache.uima.collection.impl.cpm.container.CPEFactory.produceIntegratedCasProcessor(CPEFactory.java:1088)
+	at org.apache.uima.collection.impl.cpm.container.CPEFactory.getCasProcessors(CPEFactory.java:550)
+	at org.apache.uima.collection.impl.cpm.BaseCPMImpl.init(BaseCPMImpl.java:253)
+	at org.apache.uima.collection.impl.cpm.BaseCPMImpl.<init>(BaseCPMImpl.java:127)
+	at org.apache.uima.collection.impl.CollectionProcessingEngine_impl.initialize(CollectionProcessingEngine_impl.java:75)
+	at org.apache.uima.impl.UIMAFramework_impl._produceCollectionProcessingEngine(UIMAFramework_impl.java:420)
+	at org.apache.uima.UIMAFramework.produceCollectionProcessingEngine(UIMAFramework.java:864)
+	at org.apache.uima.tools.cpm.CpmPanel.startProcessing(CpmPanel.java:573)
+	at org.apache.uima.tools.cpm.CpmPanel.access$000(CpmPanel.java:105)
+	at org.apache.uima.tools.cpm.CpmPanel$1.run(CpmPanel.java:713)
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:351)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:213)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:200)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:529)
+	at org.apache.activemq.transport.tcp.TcpTransport.connect(TcpTransport.java:483)
+	at org.apache.activemq.transport.tcp.TcpTransport.doStart(TcpTransport.java:446)
+	at org.apache.activemq.util.ServiceSupport.start(ServiceSupport.java:53)
+	at org.apache.activemq.transport.InactivityMonitor.start(InactivityMonitor.java:127)
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:58)
+	at org.apache.activemq.transport.WireFormatNegotiator.start(WireFormatNegotiator.java:72)
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:58)
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:58)
+	at org.apache.activemq.ActiveMQConnectionFactory.createActiveMQConnection(ActiveMQConnectionFactory.java:266)
+	... 22 more
+
+10/7/13 3:37:59 PM - 11: org.apache.uima.adapter.jms.client.BaseUIMAAsynchronousEngine_impl.<init>(128): INFO: UIMA Version 2.4.0 UIMA-AS Version 2.4.0
+10/7/13 3:37:59 PM - 11: org.apache.uima.adapter.jms.client.BaseUIMAAsynchronousEngine_impl.setupConnection: INFO: UIMA AS Client Created Shared Connection To Broker: tcp://localhost:61616
+10/7/13 3:37:59 PM - 11: org.apache.uima.adapter.jms.client.BaseUIMAAsynchronousEngine_impl.initializeProducer: INFO: Initializing JMS Message Producer. Broker: tcp://localhost:61616 Queue Name: hw2psureshkaaedeployQueue
+10/7/13 3:37:59 PM - 11: org.apache.uima.adapter.jms.client.BaseUIMAAsynchronousEngine_impl.initializeConsumer: INFO: Initializing JMS Message Consumer. Broker: tcp://localhost:61616 Queue Name: ID:ubuntu-54041-1381185448924-0:1:1
+10/7/13 3:38:00 PM - 11: org.apache.uima.adapter.jms.client.BaseUIMAAsynchronousEngine_impl.initialize: INFO: Asynchronous Client Has Been Initialized. Serialization Strategy: [xmi] Ready To Process.
+10/7/13 3:38:34 PM - 12: org.apache.uima.adapter.jms.client.BaseUIMAAsynchronousEngineCommon_impl.stop: INFO: Stopping Asynchronous Client.
+10/7/13 3:38:34 PM - 12: org.apache.uima.adapter.jms.client.BaseUIMAAsynchronousEngineCommon_impl.stop: INFO: Asynchronous Client Has Stopped.
+10/7/13 3:38:34 PM - 12: org.apache.uima.adapter.jms.client.BaseUIMAAsynchronousEngineCommon_impl$SharedConnection.destroy: INFO: UIMA AS Client Shared Connection Has Been Closed   
+10/7/13 3:38:34 PM - 12: org.apache.uima.adapter.jms.client.BaseUIMAAsynchronousEngine_impl.stop: INFO: UIMA AS Client Undeployed All Containers

@@ -36,14 +36,6 @@ public class QuestionAnnotator extends JCasAnnotator_ImplBase {
   public void process(JCas aJCas) throws AnalysisEngineProcessException {
     // TODO Auto-generated method stub
     String docText = aJCas.getDocumentText();
-    try {
-      BufferedWriter out = new BufferedWriter(new FileWriter("/home/psureshk/hello.txt"));
-      out.write("hello idiot");
-      out.close();
-    } catch (IOException e) {
-      // TODO Auto-generated catch block
-      e.printStackTrace();
-    }
     String lines[] = docText.split(System.getProperty("line.separator"));
     
     

@@ -28,7 +28,12 @@ import edu.stanford.nlp.semgraph.SemanticGraphCoreAnnotations.CollapsedCCProcess
 import edu.stanford.nlp.trees.Tree;
 import edu.stanford.nlp.trees.TreeCoreAnnotations.TreeAnnotation;
 import edu.stanford.nlp.util.CoreMap;
-
+/**
+ * AnswerAnnotator class parses the answer lines from the input document passed via JCas
+ * 
+ * @author psureshk
+ *
+ */
 public class AnswerAnnotator extends JCasAnnotator_ImplBase {
 
   @Override
