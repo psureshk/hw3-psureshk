@@ -30,7 +30,14 @@ import edu.stanford.nlp.trees.TreeCoreAnnotations.TreeAnnotation;
 import edu.stanford.nlp.util.CoreMap;
 /**
  * AnswerAnnotator class parses the answer lines from the input document passed via JCas
- * 
+ * using the Stanford NLP toolkit which was done in hw2. The Semantic graph annotation is
+ * used to extract the subject, verb, object, negative and agent in case of passive voice.
+ * The Scoring algorithm compares the Question's Subject with the Answer's subject if the
+ * answer is in active voice and with agent if the answer is in passive voice. Number of
+ * matches is calculated and the number of words that did not match in the answer imparts a 
+ * penalty on the score of 0.05 each. If the answer contains any negative words like 'not' 
+ * costs a penalty of 0.2 on the score. If the verbs are synonymous then, there is a penalty if
+ * they match and a different penalty if they dint match. 
  * @author psureshk
  *
  */

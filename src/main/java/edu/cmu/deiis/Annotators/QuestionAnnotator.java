@@ -30,6 +30,14 @@ import edu.stanford.nlp.trees.Tree;
 import edu.stanford.nlp.trees.TreeCoreAnnotations.TreeAnnotation;
 import edu.stanford.nlp.util.CoreMap;
 
+/**
+ * QuestionAnnotator parses the Question from the Input documents passed via JCas and extracts the
+ * Subject, Verb and Object and maintains in the Question Annotation. It uses Semantic graph
+ * annotation to extract these from the question.
+ * 
+ * @author psureshk
+ * 
+ */
 public class QuestionAnnotator extends JCasAnnotator_ImplBase {
 
   @Override
@@ -37,8 +45,7 @@ public class QuestionAnnotator extends JCasAnnotator_ImplBase {
     // TODO Auto-generated method stub
     String docText = aJCas.getDocumentText();
     String lines[] = docText.split(System.getProperty("line.separator"));
-    
-    
+
     Properties props = new Properties();
     props.put("annotators", "tokenize, ssplit, pos, lemma, ner, parse, dcoref");
     StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
@@ -75,7 +82,6 @@ public class QuestionAnnotator extends JCasAnnotator_ImplBase {
 
       // this is the parse tree of the current sentence
       Tree tree = sentence.get(TreeAnnotation.class);
-     
 
       // this is the Stanford dependency graph of the current sentence
       SemanticGraph dependencies = sentence.get(CollapsedCCProcessedDependenciesAnnotation.class);
@@ -84,22 +90,17 @@ public class QuestionAnnotator extends JCasAnnotator_ImplBase {
         if (dep[i].contains("subj")) {
           String word[] = dep[i].split("[ -]");
           qa.setSubject(word[4]);
-          //qa.addToIndexes();
+          // qa.addToIndexes();
         } else if (dep[i].contains("obj")) {
           String word[] = dep[i].split("[ -]");
           qa.setObject(word[4]);
-          //qa.addToIndexes();
+          // qa.addToIndexes();
         } else if (dep[i].contains("root")) {
           String word[] = dep[i].split("[ -]");
           qa.setVerb(word[2]);
-         
         }
-
       }
-     
-     qa.addToIndexes();
+      qa.addToIndexes();
     }
-
   }
-
 }
