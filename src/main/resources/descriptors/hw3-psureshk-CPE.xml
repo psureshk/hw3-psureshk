@@ -20,21 +20,9 @@
             </errorHandling>
             <checkpoint batch="10000" time="1000ms"/>
         </casProcessor>
-        <casProcessor deployment="integrated" name="hw2-psureshk-aae 2">
+        <casProcessor deployment="integrated" name="AnswerScorecasConsumerDescriptor">
             <descriptor>
-                <import location="hw2-psureshk-aae.xml"/>
-            </descriptor>
-            <deploymentParameters/>
-            <errorHandling>
-                <errorRateThreshold action="terminate" value="0/1000"/>
-                <maxConsecutiveRestarts action="terminate" value="30"/>
-                <timeout max="100000" default="-1"/>
-            </errorHandling>
-            <checkpoint batch="10000" time="1000ms"/>
-        </casProcessor>
-        <casProcessor deployment="integrated" name="XCAS Writer CAS Consumer">
-            <descriptor>
-                <import location="XCasWriterCasConsumer.xml"/>
+                <import location="AnswerScorecasConsumerDescriptor.xml"/>
             </descriptor>
             <deploymentParameters/>
             <errorHandling>
