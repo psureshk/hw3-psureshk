@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <name>deiis_types</name>
+  <description/>
+  <version>1.0</version>
+  <vendor/>
+  <types>
+    <typeDescription>
+      <name>edu.cmu.deiis.types.CTK.Annotation</name>
+      <description/>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>casProcessorId</name>
+          <description>The unique identifier of the CAS processor that added this annotation to the CAS</description>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>confidence</name>
+          <description>The confidence level assigned to the Annotation by the CAS processor that created it.</description>
+          <rangeTypeName>uima.cas.Double</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+    <typeDescription>
+      <name>edu.cmu.deiis.types.CTK.Answer</name>
+      <description/>
+      <supertypeName>edu.cmu.deiis.types.CTK.Annotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>isCorrect</name>
+          <description/>
+          <rangeTypeName>uima.cas.Boolean</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+    <typeDescription>
+      <name>edu.cmu.deiis.types.CTK.Question</name>
+      <description/>
+      <supertypeName>edu.cmu.deiis.types.CTK.Annotation</supertypeName>
+    </typeDescription>
+    </types>
+</typeSystemDescription>
